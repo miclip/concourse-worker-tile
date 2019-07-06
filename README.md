@@ -5,6 +5,12 @@ into the `infrastructure` network of a `PAS` or `PKS` deployment.
 
 Currently supports Concourse 4.2.4. 
 
+```sh
+om -k upload-product -p "concourse-worker-0.0.1-build.21.pivotal"
+om -k stage-product -p control-plane -v "0.0.1-build.21"
+om -k configure-product -p control-plane...
+```
+
 ```yaml
 product-name: concourse-workers
 product-properties:
