@@ -1,0 +1,37 @@
+---
+name: concourse-workers
+label: Concourse External Workers
+description: Concourse External Workers
+
+metadata_version: "2.2"
+minimum_version_for_upgrade: 0.0
+product_version: $( version )
+
+icon_image: $( icon )
+
+rank: 90
+serial: false
+
+stemcell_criteria: $( stemcell )
+
+releases:
+- $( release "concourse" )
+- $( release "garden-runc" )
+
+form_types:
+- $( form "tsa" )
+- $( form "worker" )
+
+job_types:
+- $( instance_group "worker" )
+
+property_blueprints:
+- $( property "tsa_host_key" )
+- $( property "worker_key" )
+- $( property "tsa_endpoint" )
+- $( property "tsa_port" )
+- $( property "worker_tag" )
+
+
+
+

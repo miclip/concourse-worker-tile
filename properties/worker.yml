@@ -1,0 +1,6 @@
+---
+- name: worker_tag
+  type: string
+  configurable: true
+  optional: false
+  default: sandbox_worker

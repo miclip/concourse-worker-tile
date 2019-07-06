@@ -1,0 +1,8 @@
+---
+name: garden
+release: garden-runc
+manifest: |
+  garden:
+    forward_address: 127.0.0.1:7777
+    listen_network: tcp
+    listen_address: 127.0.0.1:7777

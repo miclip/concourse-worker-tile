@@ -1,0 +1,21 @@
+---
+name: worker
+release: concourse
+consumes: |
+  baggagclaim:
+    from: worker-baggageclaim
+manifest: |
+  drain_timeout: 10m
+  tags: [(( .properties.worker_tag.value ))]
+  tsa:
+    worker_key:
+      private_key:  (( .properties.worker_key.value ))
+    host: (( .properties.tsa_endpoint.value ))
+    port: (( .properties.tsa_port.value ))
+    host_public_key: (( .properties.tsa_host_key.value ))
+    registration_mode: forward
+  garden:
+        address: 127.0.0.1:7777
+        forward_address: 127.0.0.1:7777
+  baggageclaim:
+    forward_address: 127.0.0.1:7788

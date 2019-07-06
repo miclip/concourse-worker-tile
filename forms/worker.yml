@@ -1,0 +1,13 @@
+---
+name: worker
+label: Worker
+description: |
+  Sets the worker configuration
+markdown: |
+  ### What is this?
+  
+property_inputs:
+- reference: .properties.worker_tag
+  label: 'Worker Tag'
+  description: 'Concourse tag to assign to the workers'
+  placeholder: sandbox

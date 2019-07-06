@@ -1,0 +1,22 @@
+---
+- name: tsa_host_key
+  type: string
+  configurable: true
+  optional: false
+
+- name: worker_key
+  type: text
+  configurable: true
+  optional: false
+
+- name: tsa_endpoint
+  type: domain
+  configurable: true
+  optional: false
+  
+- name: tsa_port
+  type: port
+  configurable: true
+  optional: false
+
+

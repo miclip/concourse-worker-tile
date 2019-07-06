@@ -1,0 +1,51 @@
+name: worker
+label: Concourse Worker VM
+resource_label: Concourse Worker VM
+description: Runs your concourse jobs
+templates:
+- $( job "worker" )
+- $( job "garden" )
+- $( job "baggageclaim" )
+
+resource_definitions:
+- name: cpu
+  type: integer
+  label: CPU
+  configurable: true
+  default: 2
+  constraints:
+    min: 2
+
+- name: ram
+  type: integer
+  label: RAM
+  configurable: true
+  default: 8192
+  constraints:
+    min: 8192
+
+- name: ephemeral_disk
+  type: integer
+  label: Ephemeral Disk
+  configurable: true
+  default: 10240
+  constraints:
+    min: 10240
+
+- name: persistent_disk
+  type: integer
+  label: Persistent Disk
+  configurable: false
+  default: 0
+
+max_in_flight: 1
+single_az_only: false
+
+instance_definition:
+  name: instances
+  type: integer
+  label: Instances
+  configurable: true
+  default: 1
+  constraints:
+    min: 0

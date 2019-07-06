@@ -1,0 +1,10 @@
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+*.tgz
+
+*.pivotal
+.DS_Store

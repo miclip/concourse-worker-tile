@@ -1,0 +1,6 @@
+---
+name: baggageclaim
+release: concourse
+provides: |
+  baggageclaim:
+    as: worker-baggageclaim

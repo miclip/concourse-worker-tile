@@ -1,0 +1,20 @@
+---
+- name: tsa
+  label: 'TSA'
+  description: 'Control Plane TSA'
+  property_inputs:
+  - reference: .properties.tsa_host_key
+    label: 'TSA Host Public Key'
+    description: 'Configure TSA Host Public Key'
+  - reference: .properties.worker_key
+    label: 'Worker Key'
+    description: '... worker key'
+  - reference: .properties.tsa_endpoint
+    label: 'TSA Endpoint'
+    description: 'IP address or endpoint'
+    placeholder: tsa.example.com
+  - reference: .properties.tsa_port
+    label: 'TSA Port'
+    description: 'TSA Port'
+    placeholder: 2222
+  
